@@ -1,12 +1,8 @@
-import { FC, ReactNode, useState } from 'react'
+import { FC, useState } from 'react'
 import { Link } from 'wouter'
 import Logo from '../assets/logo-marvel.png'
 
-interface NavbarProps {
-  children: ReactNode
-}
-
-export const Navbar: FC<NavbarProps> = ({ children }) => {
+export const Navbar: FC = ({ children }) => {
   const [showMenu, setShowMenu] = useState<boolean>(false)
 
   return (
@@ -43,8 +39,8 @@ export const Navbar: FC<NavbarProps> = ({ children }) => {
               </div>
             </div>
 
-            <div className='flex md:hidden'>
-              <h4 className='text-white font-bold'>Heroes App</h4>
+            <div className='flex mr-10 md:hidden'>
+              <p className='text-white font-bold'>Heroes App</p>
             </div>
 
             <div className='mr-2 flex md:hidden'>

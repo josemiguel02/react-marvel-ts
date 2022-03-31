@@ -6,7 +6,7 @@ export const HeroesList = () => {
   const { loading, heroes, error } = useHeroes()
 
   return (
-    <div className='bg-gray-800 md:h-screen p-3'>
+    <div className='bg-gray-800 min-h-screen p-3'>
       <h1 className='font-semibold text-white font-mono text-3xl text-center py-4'>
         Heroes
       </h1>
