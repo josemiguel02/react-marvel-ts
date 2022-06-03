@@ -3,7 +3,7 @@ import { HeroesItem } from './HeroesItem'
 import { Spinner } from './Spinner'
 
 export const HeroesList = () => {
-  const { loading, heroes, error } = useHeroes()
+  const { loading, heroes } = useHeroes()
 
   return (
     <div className='bg-gray-800 min-h-screen p-3'>
@@ -16,7 +16,6 @@ export const HeroesList = () => {
         ) : (
           heroes.map((heroe, i) => <HeroesItem key={i} heroe={heroe} />)
         )}
-        {error && <p className='font-semibold'>{error}</p>}
       </div>
     </div>
   )
