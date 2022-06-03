@@ -5,7 +5,7 @@ import { useTitle } from '../hooks/useTitle'
 const HeroeDetail = () => {
   const [, params] = useRoute('/heroes/:heroe')
   const heroeName = decodeURI(params!.heroe)
-  useTitle(heroeName)
+  useTitle(`Heroes | ${heroeName} 🦸‍♂️`)
   const { getHeroeByName } = useHeroes()
   const { img, link, biography } = getHeroeByName(heroeName)
 
